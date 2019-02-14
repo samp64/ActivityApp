@@ -1,0 +1,42 @@
+html, body {
+  background-color: #F1F3F5;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  font-family: 'SF-Pro-Display-Regular';
+}
+
+@font-face {
+  font-family: "SF-Pro-Display-Regular";
+  src: url("../css/fonts/SF-Pro-Display-Regular.otf");
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 540px;
+  height: 557px;
+  padding: 40px 124px;
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  color: #25333D;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 40px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
