@@ -1,0 +1,24 @@
+service: api
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  address:
+    handler: handler.address
+    events:
+      - http:
+          path: address
+          method: get

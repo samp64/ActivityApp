@@ -1,0 +1,20 @@
+
+
+button {
+    border-radius: 4px;
+    font-size: 16px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    width: 88px;
+    color: #879299;
+    background-color: white;
+    box-shadow: solid rgba(171,185,194,0.32);
+    margin: 8px;
+}
+
+.orange {
+    width: 160px;
+    background-color: #F45918;
+    color: white;
+} 

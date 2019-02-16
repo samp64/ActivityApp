@@ -1,17 +1,33 @@
 html, body {
   background-color: #F1F3F5;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 .App {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   font-family: 'SF-Pro-Display-Regular';
+  min-height: 100vh;
 }
 
 @font-face {
   font-family: "SF-Pro-Display-Regular";
   src: url("../css/fonts/SF-Pro-Display-Regular.otf");
 }
+
+.title {
+  color: #25333D;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 40px;
+}
+/* 
+
 
 .content {
   display: flex;
@@ -24,13 +40,7 @@ html, body {
   align-items: center;
 }
 
-.title {
-  color: #25333D;
-  font-size: 24px;
-  font-weight: bold;
-  display: block;
-  padding-bottom: 40px;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -39,4 +49,4 @@ html, body {
   to {
     transform: rotate(360deg);
   }
-}
+} */
