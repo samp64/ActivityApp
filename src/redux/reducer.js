@@ -1,12 +1,10 @@
 import { put, takeEvery } from "redux-saga/effects";
 import { API } from "aws-amplify";
-import { StorageGateway } from "aws-sdk/clients/all";
 
 const INPUT_CHANGE = "INPUT_CHANGE";
 const FETCH_ADDRESSES = "FETCH_ADDRESSES";
-const FETCH_ADDRESSES_SUCCESS = "FETCH_ADDRESSES";
-const FETCH_ADDRESSES_FAILED = "FETCH_ADDRESSES";
-
+const FETCH_ADDRESSES_SUCCESS = "FETCH_ADDRESSES_SUCCESS";
+const FETCH_ADDRESSES_FAILED = "FETCH_ADDRESSES_FAILED";
 
 export default (state = {
   ageFrom: "",
@@ -38,7 +36,14 @@ action = {}
     return {
       ...state,
       isLoading: false,
-      addresses: action.addresses
+      placeName: "",
+      postcode: action.addresses[0].postcode,
+      buildingUnit: action.addresses[0].buildingUnit, 
+      buildingName:  action.addresses[0].buildingName,
+      streetNumber: action.addresses[0].streetNumber,
+      streetName: action.addresses[0].streetName,
+      town: action.addresses[0].town,
+
     };
   case FETCH_ADDRESSES_FAILED:
     return {
@@ -49,9 +54,7 @@ action = {}
   default:
     return state;
   }
-};
-
-  
+};  
  
 export function inputChange(name, value) {
   return {
@@ -75,10 +78,9 @@ export function* adressesSaga() {
 function* fetchAddresses() {
   try {
     const addresses = yield  API.get("address", "/address");
-    yield(FETCH_ADDRESSES_SUCCESS);
-    return addresses;
+    return yield put({ type: FETCH_ADDRESSES_SUCCESS, addresses });
   } catch(e) {
-    yield(FETCH_ADDRESSES_FAILED);
+    yield put({ type: FETCH_ADDRESSES_FAILED });
     return e;
   }
 }

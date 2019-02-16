@@ -1,14 +1,12 @@
 html, body {
   background-color: #F1F3F5;
   min-height: 100vh;
-  overflow: hidden;
   margin: 0;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   font-family: 'SF-Pro-Display-Regular';
   min-height: 100vh;
@@ -26,27 +24,3 @@ html, body {
   display: block;
   padding-bottom: 40px;
 }
-/* 
-
-
-.content {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  width: 540px;
-  height: 557px;
-  padding: 40px 124px;
-  text-align: center;
-  align-items: center;
-}
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

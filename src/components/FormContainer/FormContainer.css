@@ -11,9 +11,7 @@
     flex-direction: column;
     background-color: white;
     width: 540px;
-    max-height: 477px;
     padding: 40px 94px;
     text-align: center;
     align-items: center;
-    flex-grow: 1;
   }
