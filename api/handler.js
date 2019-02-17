@@ -1,4 +1,4 @@
-export const address = async (event, context) => {
+export const address = async () => {
   return {
     statusCode: 200,
     body: JSON.stringify({

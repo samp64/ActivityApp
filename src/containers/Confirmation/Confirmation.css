@@ -1,0 +1,26 @@
+.confirmation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+.confirmationHeading {
+    font-weight: 700;
+    text-align: center;
+}
+
+.confirmActivity {
+    /* flex-basis: 50%; */
+    /* align-self: flex-start; */
+    /* background-color: blue; */
+}
+
+.confirmAddress {
+    /* flex-basis: 50%; */
+    /* align-self: flex-end; */
+    /* background-color: blue; */
+}

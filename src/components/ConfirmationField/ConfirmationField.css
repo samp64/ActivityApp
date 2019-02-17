@@ -1,0 +1,24 @@
+/* .confirmActivity {
+    flex-basis: 50%;
+    background-color: blue;
+}
+
+.confirmationHeading {
+    font-weight: 600;
+
+} */
+
+.confirmationField > span {
+    margin-right: 10px;
+}
+
+
+/* .confirmationFieldName {
+align-self: flex-start;
+}
+
+
+
+.confirmationFieldLabel {
+    align-self: flex-end;
+    } */

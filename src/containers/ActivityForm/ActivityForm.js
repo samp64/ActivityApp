@@ -65,11 +65,16 @@ class ActivityForm extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  ageFrom: state.ageFrom,
-  ageTo: state.ageTo,
-  activityWebpage: state.activityWebpage,
-  activityName: state.activityName
+const mapStateToProps = ({
+  ageFrom,
+  ageTo,
+  activityWebpage,
+  activityName
+}) => ({
+  ageFrom,
+  ageTo,
+  activityWebpage,
+  activityName
 })
 
 const mapDispatchToProps = {

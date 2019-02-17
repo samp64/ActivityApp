@@ -1,5 +1,7 @@
 import { put, takeEvery } from "redux-saga/effects";
+import validator from "validator";
 import { API } from "aws-amplify";
+import Postcode from "postcode";
 
 const INPUT_CHANGE = "INPUT_CHANGE";
 const FETCH_ADDRESSES = "FETCH_ADDRESSES";
@@ -17,7 +19,8 @@ export default (state = {
   buildingName: "",
   streetNumber: "",
   streetName: "",
-  town: ""
+  town: "",
+  errorMessage: ""
 },
 action = {}
 ) => {
@@ -49,7 +52,7 @@ action = {}
     return {
       ...state,
       isLoading: false,
-      error: true
+      errorMessage: "Failed to load addresses."
     };
   default:
     return state;
@@ -70,9 +73,8 @@ export function loadAddresses() {
   };
 }
  
-export function* adressesSaga() {
-  yield takeEvery(FETCH_ADDRESSES, fetchAddresses);
-
+export function* addressesSaga() {
+  yield takeEvery(FETCH_ADDRESSES, fetchAddresses); 
 }
 
 function* fetchAddresses() {
@@ -84,4 +86,3 @@ function* fetchAddresses() {
     return e;
   }
 }
-

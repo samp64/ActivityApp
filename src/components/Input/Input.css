@@ -9,14 +9,15 @@
 }
 
 input {
-  width: 100%;
+  width: 94%;
+  padding: 6px 3%;
   height: 28px;
   border: 2px solid rgba(171,185,194,0.32);
   border-radius: 4px;
   background-color: #FFFF;
   font-size: 16px;
   margin-top: 10px;
-  padding: 6px 0;
+  transition: all .5s;
 }
 
 label {
@@ -29,6 +30,10 @@ label {
 
 .isDisabled {
   cursor: not-allowed;
+}
+
+.inValid {
+  border: 2px solid rgba(248, 36, 47, 0.767);
 }
 
 

@@ -50,6 +50,9 @@
     "classnames": "^2.2.6",
     "glamor": "^2.20.40",
     "glamorous": "^4.13.1",
+    "lodash": "^4.17.11",
+    "lodash.camel-case": "^4.2.1",
+    "postcode": "^1.0.1",
     "prettier": "^1.14.2",
     "react": "^16.8",
     "react-beautiful-dnd": "^10.0.1",
@@ -70,6 +73,7 @@
     "redux-saga": "^1.0.1",
     "redux-thunk": "^2.3.0",
     "regenerator-runtime": "^0.13.1",
-    "serverless": "^1.37.1"
+    "serverless": "^1.37.1",
+    "validator": "^10.11.0"
   }
 }

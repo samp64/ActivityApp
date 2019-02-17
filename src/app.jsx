@@ -4,6 +4,7 @@ import Amplify from "aws-amplify";
 import { Provider } from "react-redux";
 import ActivityForm from "./containers/ActivityForm";
 import AddressForm from "./containers/AddressForm";
+import Confirmation from "./containers/Confirmation/Confirmation";
 
 import store from "./redux/store";
 
@@ -24,9 +25,9 @@ Amplify.configure({
 });
 
 const screens = [
-  <ActivityForm key={198989}/>,
-  <AddressForm key={8092}/>,
-  // "confirmation"
+  <ActivityForm key={1}/>,
+  <AddressForm key={2}/>,
+  <Confirmation key={3} />
 ];
 
 class App extends Component {
