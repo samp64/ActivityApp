@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "SF-Pro-Display-Regular";
+    src: url("../../css/fonts/SF-Pro-Display-Regular.otf");
+  }
+  
+.headerWrapper {
+    height: 40px;
+    width: 177px;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.headerWrapper > div {
+    display: flex;
+    width: 100%;
+
+ }
+
+.headerWrapper > img {
+    margin-right: 16px;
+}
+
+.clubName {
+    color: #657885;
+    font-family: "SF-Pro-Display-Regular";
+    font-size: 14px;
+}
+
+.backToActivities {
+    color: #00A5E6;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .clubName {
+        margin-right: auto;
+
+    }
+
+    .headerWrapper {
+        /* display: block; */
+        height: 60px;
+    }
+    /* .headerWrapper > img {
+        margin-right: 0;
+    } */
+
+
+    .headerWrapper > div {
+        display: inline-block;
+        width: 190px;
+    }
+}

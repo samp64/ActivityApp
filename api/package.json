@@ -4,13 +4,12 @@
   "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
   "main": "handler.js",
   "scripts": {
-    "test": "jest"
+    "start": "sls offline"
   },
   "author": "",
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
+    "type": "git"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -20,7 +19,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "jest": "^21.2.1",
-    "serverless-offline": "^3.25.6",
+    "serverless-dynamodb-local": "^0.2.30",
+    "serverless-offline": "^3.33.0",
     "serverless-webpack": "^5.1.0",
     "webpack": "^4.16.2",
     "webpack-node-externals": "^1.6.0"

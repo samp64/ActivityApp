@@ -43,6 +43,7 @@
   top: 40px;
   border-radius: 8px;
   background-color: white;
+  z-index: 10;
 }
 
 .options > div {
@@ -56,4 +57,19 @@
 
 .options > div:hover {
   background-color: lightblue;
+}
+
+.placeholder {
+  color: #879299;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .selectWrapper {
+    padding: 5px 0;
+  }
+
+  .selectWrapper > label {
+    top: -16px;
+  }
 }

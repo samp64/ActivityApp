@@ -1,4 +1,4 @@
-import ActivityForm from './ActivityForm';
+import ActivityForm from "./ActivityForm";
 
-export default ActivityForm
+export default ActivityForm;
 

@@ -1,6 +1,7 @@
 .inputWrapper {
-  width: 540px;
-  padding-bottom: 28px;
+  width: 560px;
+  padding-bottom: 32px;
+  position: relative;
 }
 
 .halfWidth {
@@ -16,9 +17,18 @@ input {
   border-radius: 4px;
   background-color: #FFFF;
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 8px;
   transition: all .5s;
 }
+
+
+/* .halfWidth .optional {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #879299;
+  font-size: 14px;
+} */
 
 label {
   font-weight: bold;
@@ -26,6 +36,13 @@ label {
   font-size: 14px;
   display: block;
   text-align: left;
+}
+
+span.helpText {
+  color: #879299;
+  font-size: 14px; 
+  margin-top: 10px;
+  /* display: block; */
 }
 
 .isDisabled {
@@ -36,5 +53,21 @@ label {
   border: 2px solid rgba(248, 36, 47, 0.767);
 }
 
+.optional {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  font-size: 14px; 
+  color: #879299;
+}
 
+@media only screen and (max-width: 768px) {
+  .inputWrapper {
+    width: 260px;
+  }
 
+  .activityWebpage {
+    margin-top: 20px;
+  }
+
+}

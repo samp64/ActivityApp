@@ -1,31 +1,68 @@
-import React, { useState } from "react";
+import React from "react";
+import classnames from 'classnames';
 import { func, string, arrayOf, number, oneOfType } from "prop-types";
 import "./Select.css";
 
-const Select = ({ label, onClick, options, value, placeholder }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-  Select.handleClickOutside = () => setIsOpen(false);
-  return (
-    <div className="selectWrapper">
-      {<label className="selectLabel">{label}</label>}
+export default class Select extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
 
-      <div className="select" onClick={toggle} >
-        <div className="placeholder">{value || placeholder}</div>
-        {
-          isOpen && 
-          <div className="options">
-            {options.map(option => 
-              <div value={option} id="option" key={option} onMouseDown={() => onClick(option)}>
-                <span onClick={onClick}>{option}</span>
-              </div> 
-            )}
-          </div>
-        }
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickOutside);
+  }
+
+  setOpen = isOpen => this.setState({ isOpen })
+
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      this.setState({ isOpen: false });
+    }
+  }
+
+  render () {
+    const { label, onClick, options, value, placeholder, onBlur } = this.props;
+    const { isOpen } = this.state;
+    return (
+      <div className="selectWrapper">
+        {<label className="selectLabel">{label}</label>}
+    
+        <div className="select" onClick={() => this.setOpen(true)} onBlur={onBlur}>
+          <div className={classnames({ placeholder: !value })}>{value || placeholder}</div>
+          { 
+            isOpen && 
+              <div className="options" ref={this.setWrapperRef}>
+                {options.map(option => 
+                  <div
+                    value={option}
+                    id="option"
+                    key={option} 
+                    onMouseDown={() => onClick(option)}
+                    onMouseUp={() => this.setOpen(false)}
+                  >
+                    <span>{option}</span>
+                  </div> 
+                )}
+              </div>
+          }
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 Select.propTypes = {
   onClick: func.isRequired,
@@ -42,4 +79,3 @@ Select.propTypes = {
 };
 
 
-export default Select;

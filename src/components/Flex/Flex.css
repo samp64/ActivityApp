@@ -1,0 +1,22 @@
+
+.flexWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 580px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+    .selectWrapper {
+      padding: 5px 0;
+    }
+
+.flexWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+}

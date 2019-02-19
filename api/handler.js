@@ -19,7 +19,7 @@ const addresses =
   },
   {
     "buildingUnit":"4th Floor",
-    "buildingName":null,
+    "buildingName": null,
     "streetNumber":"9-10",
     "streetName":"Charterhouse Buildings",
     "town":"London",

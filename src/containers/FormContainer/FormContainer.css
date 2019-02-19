@@ -7,12 +7,21 @@
     margin-bottom: 20px;
   }
 
-  .FormContainer > div {
+  .FormContainer > .form {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 540px;
     padding: 40px 94px;
-    text-align: center;
     align-items: center;
   }
+
+  @media only screen and (max-width: 768px) {
+  .FormContainer {
+    margin-bottom: 0;
+  }
+ 
+  .FormContainer > .form {
+    width: 262px;
+    padding: 24px;
+  }
+}

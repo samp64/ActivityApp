@@ -35,8 +35,8 @@ class Confirmation extends Component {
             <div className="confirmationHeading">
               Activity
             </div>
-            {activityFields.map(field =>
-              <ConfirmationField key={field} label={field} value={this.props[camelCase(field)]} />
+            {activityFields.map(field => 
+              this.props[camelCase(field)] && <ConfirmationField key={field} label={field} value={this.props[camelCase(field)]} />
             )}
           </div>
 
@@ -45,7 +45,7 @@ class Confirmation extends Component {
               Address
             </div>
             {addressFields.map(field =>
-              <ConfirmationField key={field} label={field} value={this.props[camelCase(field)]} />
+              this.props[camelCase(field)] && <ConfirmationField key={field} label={field} value={this.props[camelCase(field)]} />
             )}
           </div>
         </div>
