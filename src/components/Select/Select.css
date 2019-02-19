@@ -10,18 +10,18 @@
 }
 
 .select {
-    position: relative;
-    display: inline-block;
-    background-color: DodgerBlue;
-    height: 22px;
-    width: 240px;
-    align-self: flex-start;
-    background-color: #FFFF;
-    font-size: 16px;
-    padding: 9px;
-    border: 2px solid rgba(171,185,194,0.32);
-    border-radius: 4px;
-    text-align: left;
+  position: relative;
+  display: inline-block;
+  background-color: rgb(178, 207, 236);
+  height: 22px;
+  width: 240px;
+  align-self: flex-start;
+  background-color: #FFFF;
+  font-size: 16px;
+  padding: 9px;
+  border: 2px solid rgba(171,185,194,0.32);
+  border-radius: 4px;
+  text-align: left;
 }
 
 .select:after {
@@ -47,16 +47,16 @@
 }
 
 .options > div {
-  width: 96%;
+  width: 95%;
   height: 28px;
   border-bottom: 2px solid rgba(171,185,194,0.32);
   padding: 7px;
-  transition: all .5s;
+  transition: all .3s;
   text-align: center;
 }
 
 .options > div:hover {
-  background-color: lightblue;
+  background-color: rgb(218, 238, 245);
 }
 
 .placeholder {
