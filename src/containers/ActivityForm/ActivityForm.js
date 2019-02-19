@@ -5,7 +5,7 @@ import Flex from '../../components/Flex/Flex';
 import Input from "../../components/Input/Input";
 import Select from "../../components/Select/Select";
 
-import { inputChange, validateActivityField } from '../../redux/reducer';
+import { inputChange, validateActivityField } from '../../redux';
 
 const ages = [
   '1 year',
@@ -18,7 +18,8 @@ const ages = [
   '8 years',
   '9 years',
   '10 years',
-  '11 years'];
+  '11 years'
+];
 
 class ActivityForm extends Component {
   constructor(props) {

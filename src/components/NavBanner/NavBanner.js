@@ -1,11 +1,12 @@
 import React from "react";
+import { func, shape, number } from "prop-types";
 import { connect } from "react-redux";
-import { backPage, nextPage } from "../../redux/reducer";
+import { backPage, nextPage } from "../../redux";
 import Button from "../Button/Button";
 
 import "./NavBanner.css";
 
-const SubmitBanner = ({
+const NavBanner = ({
   backPage,
   nextPage,
   page,
@@ -27,6 +28,14 @@ const SubmitBanner = ({
   );}
 ;
 
+NavBanner.propTypes = {
+  backPage: func.isRequired,
+  nextPage : func.isRequired,
+  page: number.isRequired,
+  activityFormValidities: shape(),
+  addressFormValidities: shape()
+};
+
 const mapStateToProps = ({
   page,
   activityFormValidities,
@@ -43,9 +52,9 @@ const mapDispatchToProps = {
 };
 
 
-const ConnectedSubmitBanner = connect(
+const ConnectedNavBanner = connect(
   mapStateToProps,
   mapDispatchToProps
-)(SubmitBanner);
+)(NavBanner);
 
-export default ConnectedSubmitBanner;
+export default ConnectedNavBanner;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Input from "../../components/Input/Input";
 
 import { connect } from 'react-redux'
-import { inputChange, validateAddressField, loadAddresses, nextAddress } from '../../redux/reducer';
+import { inputChange, validateAddressField, loadAddresses, nextAddress } from '../../redux';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Button from "../../components/Button/Button";
 
