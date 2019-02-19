@@ -34,22 +34,20 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .clubName {
-        margin-right: auto;
+  .clubName {
+    margin-right: auto;
+  }
 
-    }
+  .headerWrapper {
+    height: 60px;
+  }
 
-    .headerWrapper {
-        /* display: block; */
-        height: 60px;
-    }
-    /* .headerWrapper > img {
-        margin-right: 0;
-    } */
+  .headerWrapper > div {
+    display: inline-block;
+    width: 190px;
+  }
 
-
-    .headerWrapper > div {
-        display: inline-block;
-        width: 190px;
-    }
+  .backToActivities {
+    line-height: 20px;;
+  }
 }
