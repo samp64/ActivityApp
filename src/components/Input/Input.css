@@ -21,15 +21,6 @@ input {
   transition: all .5s;
 }
 
-
-/* .halfWidth .optional {
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  color: #879299;
-  font-size: 14px;
-} */
-
 label {
   font-weight: bold;
   color: #25333D;
@@ -42,7 +33,6 @@ span.helpText {
   color: #879299;
   font-size: 14px; 
   margin-top: 10px;
-  /* display: block; */
 }
 
 .isDisabled {

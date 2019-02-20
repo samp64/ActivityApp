@@ -121,7 +121,8 @@ action = {}
       ...state,
       activityFormValidities: {
         ...state.activityFormValidities,
-        [action.name]: validateField(action.name, action.value)
+        [action.name]: validateField(action.name, action.value),
+        ageTo: state.ageTo > state.ageFrom
       }
     };
   case VALIDATE_ADDRESS_FIELD:

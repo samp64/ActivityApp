@@ -61,7 +61,11 @@
 
 .placeholder {
   color: #879299;
+}
 
+
+.inValid {
+  border: 2px solid rgba(248, 36, 47, 0.767);
 }
 
 @media only screen and (max-width: 768px) {

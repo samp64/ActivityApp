@@ -33,7 +33,7 @@ export function loadAddresses() {
     type: FETCH_ADDRESSES
   };
 }
-  
+
 export function validateActivityField(name, value) {
   return {
     type: VALIDATE_ACTIVITY_FIELD,

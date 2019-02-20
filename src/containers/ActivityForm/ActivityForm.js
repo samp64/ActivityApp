@@ -53,7 +53,6 @@ class ActivityForm extends Component {
       activityWebpage,
       activityFormValidities
     } = this.props;
-    
     return (
       <React.Fragment>
         <span className="title">About your activity</span>
@@ -73,7 +72,6 @@ class ActivityForm extends Component {
             options={ages}
             placeholder="From"
             value={ageFrom}
-            onBlur={this.validateField}
             inValid={!activityFormValidities.ageFrom}
           />
           <Select
@@ -82,7 +80,7 @@ class ActivityForm extends Component {
             options={ages}
             placeholder="To"
             value={ageTo}
-            onBlur={this.validateField}
+            onChange={this.validateField}
             inValid={!activityFormValidities.ageTo}
           />
         </Flex>

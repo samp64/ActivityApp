@@ -45,7 +45,9 @@ Navigate to http://localhost:8009/
 
 ## Notes
 
-My plan was to set up a local dynamodb instance with the serverless offline the project is using.
+My plan was to set up a local dynamodb with the serverless offline the project is using.
 Annoyingly receiving an unhelpful error, which other people seem to be getting too: https://github.com/99xt/serverless-dynamodb-local/issues/210
 
 I will have another go if this gets resolved.
+
+So for now it's just returning the JSON.

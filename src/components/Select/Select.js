@@ -34,13 +34,13 @@ export default class Select extends React.Component {
   }
 
   render () {
-    const { label, onClick, options, value, placeholder, onBlur } = this.props;
+    const { label, onClick, options, value, placeholder, onBlur, inValid } = this.props;
     const { isOpen } = this.state;
     return (
       <div className="selectWrapper">
         {<label className="selectLabel">{label}</label>}
     
-        <div className="select" onClick={() => this.setOpen(true)} onBlur={onBlur}>
+        <div className={classnames("select", { inValid: value && inValid })} onClick={() => this.setOpen(true)}>
           <div className={classnames({ placeholder: !value })}>{value || placeholder}</div>
           { 
             isOpen && 
@@ -52,6 +52,7 @@ export default class Select extends React.Component {
                     key={option} 
                     onMouseDown={() => onClick(option)}
                     onMouseUp={() => this.setOpen(false)}
+                    onClick={onBlur}
                   >
                     <span>{option}</span>
                   </div> 
@@ -59,6 +60,7 @@ export default class Select extends React.Component {
               </div>
           }
         </div>
+        
       </div>
     );
   }
