@@ -11,7 +11,6 @@ import {
   NEXT_ADDRESS
 } from ".";
 
-
 export default (state = {
   page: 0,
   addressLoaded: false,
