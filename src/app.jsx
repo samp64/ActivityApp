@@ -27,8 +27,7 @@ class App extends Component {
       <div className="App">
         <Provider store={store}>
           <React.Fragment>
-            <FormContainer>
-            </FormContainer>
+            <FormContainer />
             <NavBanner />
           </React.Fragment>
         </Provider>
